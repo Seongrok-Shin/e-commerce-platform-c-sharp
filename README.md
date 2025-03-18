@@ -5,12 +5,18 @@ A modern, full-featured e-commerce platform built using ASP.NET Core, Entity Fra
 Features
 
 ✅ User Authentication & Authorization – Secure login/signup using Identity & JWT
+
 ✅ Product Management – Admin panel for adding, updating, and deleting products
+
 ✅ Shopping Cart & Checkout – Users can add items to their cart and place orders
+
 ✅ Payment Integration – Supports payments via Stripe or PayPal
+
 ✅ Order Management – Users can view past orders and track status
+
 ✅ Search & Filtering – Search by product name, category, or price range
-✅ Responsive UI – Built with Razor Pages / Blazor for a seamless experience
+
+✅ Responsive UI – Built with Angular for a seamless experience
 
 ## Tech Stack
 
