@@ -1,5 +1,5 @@
-## 🛒 E-Commerce Platform (C# & ASP.NET Core)
-# Overview
+# 🛒 E-Commerce Platform (C# & ASP.NET Core)
+## Overview
 
 A modern, full-featured e-commerce platform built using ASP.NET Core, Entity Framework, and SQL Server. This platform allows users to browse products, manage their shopping cart, and complete secure purchases.
 Features
@@ -12,7 +12,7 @@ Features
 ✅ Search & Filtering – Search by product name, category, or price range
 ✅ Responsive UI – Built with Razor Pages / Blazor for a seamless experience
 
-# Tech Stack
+## Tech Stack
 
     Frontend: Angular, Angular Material / TailwindCSS
     Backend: ASP.NET Core Web API, C#
@@ -21,7 +21,7 @@ Features
     Payment Gateway: Stripe / PayPal API
     Deployment: Netlify, Azure
 
-# Installation
+## Installation
 
 1️⃣ Clone the repo:
 ```
