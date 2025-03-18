@@ -1,0 +1,10 @@
+bin/
+obj/
+*.pdb
+*.bak
+*.swp
+*.suo
+*.user
+*.userosscache
+*.vsscc
+appsettings.Development.json
