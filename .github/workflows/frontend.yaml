@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install Chromium
+        run: sudo apt-get install -y chromium-browser
+
       # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
