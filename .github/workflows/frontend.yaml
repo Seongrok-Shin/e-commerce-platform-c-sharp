@@ -40,7 +40,7 @@ jobs:
       - name: Run tests
         run: |
           cd frontend
-          xvfb-run -a npm test --watch=false --no-watch --no-progress --browsers=ChromeHeadless
+          npm test --watch=false --no-watch --no-progress --browsers=ChromeHeadless
 
       # Step 5: Build the application
       - name: Build the Angular project
