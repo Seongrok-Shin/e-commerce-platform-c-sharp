@@ -12,9 +12,7 @@ module.exports = function (config) {
         ],
       },
     },
-    captureTimeout: 60000,
-    browserDisconnectTimeout: 60000,
-    browserDisconnectTolerance: 3,
-    browserNoActivityTimeout: 60000,
+    singleRun: true,
+    autoWatch: false,
   });
 };
