@@ -34,7 +34,7 @@ jobs:
       - name: Run tests
         run: |
           cd frontend
-          npm test --browsers=ChromeHeadless
+          npm test --no-watch --no-progress --browsers=ChromeHeadless
 
       # Step 5: Build the application
       - name: Build the Angular project
