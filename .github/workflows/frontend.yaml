@@ -46,4 +46,4 @@ jobs:
       - name: Build the Angular project
         run: |
           cd frontend
-          npm build
+          npm run build
