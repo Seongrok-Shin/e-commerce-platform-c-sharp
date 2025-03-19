@@ -1,4 +1,4 @@
-name: Frontend CI/CD Pipeline
+name: Frontend CI Pipeline
 
 # Trigger the workflow on push or pull_request to the main branch
 on:
@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install Chromium
+        run: sudo apt-get install -y chromium-browser
+
+      - name: Install xvfb
+        run: sudo apt-get install -y xvfb
+
       # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,24 +28,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "22"
+          node-version: "22.x"
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd frontend
+          npm install
 
       # Step 4: Run tests
       - name: Run tests
-        run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+        run: |
+          cd frontend
+          xvfb-run -a npm test
 
       # Step 5: Build the application
       - name: Build the Angular project
-        run: ng build
-
-      # Step 6: Upload test results as artifacts
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: ./coverage
+        run: |
+          cd frontend
+          npm run build
