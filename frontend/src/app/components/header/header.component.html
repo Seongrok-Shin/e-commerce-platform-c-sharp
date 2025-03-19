@@ -1,5 +1,5 @@
 <mat-toolbar class="header-container" color="primary">
-  <p class="title">E-commerce Platform</p>
+  <span class="title">E-commerce Platform</span>
   <span class="spacer"></span>
   <div class="nav-link">
     <button mat-button routerLink="/">Home</button>
@@ -33,7 +33,10 @@
   </mat-menu>
 
   <button mat-icon-button routerLink="/cart" aria-label="cart-icon">
-    <mat-icon matBadge="{{ cartItemCount }}" matBadgeColor="warn"
+    <mat-icon
+      matBadge="{{ cartItemCount }}"
+      matBadgeColor="warn"
+      aria-hidden="false"
       >shopping_cart</mat-icon
     >
   </button>
@@ -42,6 +45,7 @@
     [matMenuTriggerFor]="menu"
     class="menu"
     aria-label="menu-icon"
+    data-testid="mobile-menu"
   >
     <mat-icon>menu</mat-icon>
   </button>
