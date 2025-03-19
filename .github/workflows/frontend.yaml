@@ -35,11 +35,3 @@ jobs:
       # Step 5: Build the application
       - name: Build the Angular project
         run: ng build
-
-      # Step 6: Upload test results as artifacts
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: ./coverage
