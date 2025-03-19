@@ -1,4 +1,4 @@
-name: Frontend CI/CD Pipeline
+name: Frontend CI Pipeline
 
 # Trigger the workflow on push or pull_request to the main branch
 on:
@@ -26,11 +26,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "22"
+          node-version: "22.x"
 
       # Step 4: Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # Step 5: Run tests
       - name: Run tests
