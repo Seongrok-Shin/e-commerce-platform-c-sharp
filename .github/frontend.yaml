@@ -1,0 +1,45 @@
+name: Frontend CI/CD Pipeline
+
+# Trigger the workflow on push or pull_request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run tests
+      - name: Run tests
+        run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+
+      # Step 5: Build the application
+      - name: Build the Angular project
+        run: ng build
+
+      # Step 6: Upload test results as artifacts
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: ./coverage
