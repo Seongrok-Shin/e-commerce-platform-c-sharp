@@ -37,8 +37,8 @@ jobs:
 
       # Step 5: Run tests
       - name: Run tests
-        run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+        run: npm test --no-watch --no-progress --browsers=ChromeHeadless
 
       # Step 6: Build the application
       - name: Build the Angular project
-        run: ng build
+        run: npm build
