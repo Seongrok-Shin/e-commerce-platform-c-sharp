@@ -1,1 +1,10 @@
-/*# sourceMappingURL=app.component.css.map */
+.app-container {
+  display: flex;
+  justify-content: center;
+}
+.app-container .app-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=app.component.css.map */

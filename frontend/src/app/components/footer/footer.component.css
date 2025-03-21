@@ -1,0 +1,71 @@
+.footer-container {
+  margin-top: 4px;
+  display: flex;
+  margin-bottom: 4px;
+  position: absolute;
+  background-color: #ffffff;
+  justify-content: space-between;
+  height: auto;
+}
+.footer-container .spacer {
+  flex: 1 1 auto;
+}
+.footer-container .footer-link {
+  display: flex;
+}
+.footer-container .footer-link .link-button {
+  border-radius: 0px;
+  border-color: #000000;
+  background-color: #ffffff;
+  border-width: 0px;
+  color: #797979;
+}
+.footer-container .copyright {
+  color: #797979;
+  font-size: 12px;
+}
+.footer-container .icon-container {
+  display: flex;
+  flex-direction: row;
+}
+.footer-container .icon-container .icon {
+  border-radius: 0px;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border-width: 0px;
+  color: #797979;
+}
+.footer-container .material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+.footer-container .mat-icon {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  background-repeat: no-repeat;
+  fill: currentColor;
+  overflow: hidden;
+  width: 14px;
+  height: 14px;
+}
+
+@media screen and (max-width: 720px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=footer.component.css.map */

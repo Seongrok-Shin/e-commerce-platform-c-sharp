@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="footer-container">
+  <div class="footer-link">
+    <button class="link-button" routerLink="/">Home</button>
+    <button class="link-button" routerLink="/products">Products</button>
+  </div>
+  <span class="spacer"></span>
+  <span class="copyright"
+    >Seongrok Shin © {{ currentYear }} all rights reserved</span
+  >
+  <div class="icon-container">
+    <button class="icon" (click)="portfolio()">
+      <mat-icon aria-hidden="false">language</mat-icon>
+    </button>
+    <button class="icon" (click)="github()">
+      <ng-icon aria-hidden="false" name="octMarkGithub" />
+    </button>
+  </div>
+</mat-toolbar>
